@@ -37,3 +37,4 @@ skips = ["B101", "B104", "B105", "B106", "B107", "B108", "B110", "B112"]
 markers = [
     "asyncio: mark test as asyncio"
 ]
+asyncio_default_fixture_loop_scope = "function"

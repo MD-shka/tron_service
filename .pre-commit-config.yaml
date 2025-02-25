@@ -57,3 +57,4 @@ repos:
         name: Tests
         entry: .venv/bin/pytest
         language: system
+        pass_filenames: false
