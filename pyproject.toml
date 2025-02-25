@@ -13,15 +13,11 @@ dependencies = [
     "pre-commit>=4.1.0",
     "pydantic>=2.10.6",
     "pytest>=8.3.4",
+    "pytest-asyncio>=0.25.3",
     "python-dotenv>=1.0.1",
     "sqlalchemy>=2.0.38",
     "tronpy>=0.5.0",
     "uvicorn>=0.34.0",
-]
-
-[dependency-groups]
-dev = [
-    "pytest>=8.3.4",
 ]
 
 [tool.ruff]
@@ -36,3 +32,8 @@ line-length = 119
 [tool.bandit]
 exclude_dirs = ["tests", "test"]
 skips = ["B101", "B104", "B105", "B106", "B107", "B108", "B110", "B112"]
+
+[tool.pytest.ini_options]
+markers = [
+    "asyncio: mark test as asyncio"
+]
