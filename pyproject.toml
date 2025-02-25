@@ -1,0 +1,38 @@
+[project]
+name = "tron-service"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiosqlite>=0.21.0",
+    "black>=25.1.0",
+    "fastapi>=0.115.8",
+    "make>=0.1.6.post2",
+    "mypy>=1.15.0",
+    "pre-commit>=4.1.0",
+    "pydantic>=2.10.6",
+    "pytest>=8.3.4",
+    "python-dotenv>=1.0.1",
+    "sqlalchemy>=2.0.38",
+    "tronpy>=0.5.0",
+    "uvicorn>=0.34.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+]
+
+[tool.ruff]
+line-length = 119
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 119
+
+[tool.bandit]
+exclude_dirs = ["tests", "test"]
+skips = ["B101", "B104", "B105", "B106", "B107", "B108", "B110", "B112"]
